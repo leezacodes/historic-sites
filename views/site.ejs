@@ -39,10 +39,10 @@
                 <%=site.date%> (<%=site.dateType%>)
                 <br>
                 <span class="font-bold"> Location: </span>
-                <%= site.location%>, <%= site.provinceOrTerritoryObj.name%>
+                <%= site.location%>, <%= site.ProvinceOrTerritory.name%>
                 <br>
                 <span class="font-bold">Region: </span>
-                <%= site.provinceOrTerritoryObj.region%>
+                <%= site.ProvinceOrTerritory.region%>
                 <br>
                 <span class="font-bold">Geolocation: </span>
                 <%= site.latitude%>, <%= site.longitude%>
@@ -54,20 +54,28 @@
                 <span id="quote"></span>
                 <br>
                 <br>
+
+                <div class="flex justify-end">
+                    <a
+                      class="btn btn-outline btn btn-success rounded-btn"
+                      href="/editSite/<%= site.siteId %>"
+                      >Edit: <%= site.site %>
+                    </a>
+                  </div>
                 <a class="btn btn-primary btn-sm" href="#" onclick="history.back(); return false;">RETURN</a>
                 <br>
               </div>
             </div>
         </div>
         <script>
-            async function fetchData() {
-                const response = await fetch('https://quotable.io/random');
-                const data = await response.json();
+            document.addEventListener("DOMContentLoaded", () => {
+                fetch('https://quotable.io/random')
+                .then((response) => response.json())
+                .then((data) => {
+            // Assuming you want to send it back to the server or just display it on the page
                 document.getElementById('quote').textContent = `"${data.content}" - ${data.author}`;
-            }
-            
-            document.addEventListener("DOMContentLoaded", ()=>{
-               fetchData().catch(console.error);
+            })
+            .catch(console.error);
             });
         </script>
 </body>

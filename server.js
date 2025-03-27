@@ -22,6 +22,7 @@ app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
+
 app.get("/", (req, res) => {
   res.render("home");
 });
@@ -61,6 +62,86 @@ app.get("/sites/:id", async (req, res) => {
     res.status(404).render("404", {message: "I'm sorry, we're unable to find what you're looking for",});
   }
 });
+
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/addSite", (req, res) => {
+  siteData
+    .getAllProvincesAndTerritories()
+    .then((provinces) => {
+      res.render("addSite", { provincesAndTerritories: provinces });
+    })
+    .catch((err) => {
+      res.status(404).render("404", { message: "Unable to find sites." });
+      console.log(err);
+    });
+});
+
+app.post("/addSite", (req, res) => {
+  const data = req.body;
+  siteData
+    .addSite(data)
+    .then(() => {
+      res.redirect("/sites");
+    })
+    .catch((err) => {
+      res.render("500", {
+        message: `I'm sorry, but we have encountered the following error: ${ err.errors[0].message }`,
+      });
+      console.log(err);
+    });
+});
+
+app.get("/editSite/:id", (req, res) => {
+  const siteId = req.params.id;
+  if (siteData) {
+    siteData
+      .getSiteById(siteId)
+      .then((data) => {
+        siteData.getAllProvincesAndTerritories().then((site) => {
+          res.render("editSite", { provincesAndTerritories: site, sites: data });
+        });
+      })
+      .catch((err) => {
+        res.status(404).render("404", { message: err });
+        console.log(err);
+      });
+  }
+});
+
+app.post("/editSite", (req, res) => {
+  const siteId = req.body.id;
+  const data = req.body;
+  if (siteId) {
+    siteData
+      .editSite(siteId, data)
+      .then(() => {
+        res.redirect("/sites");
+      })
+      .catch((err) => {
+        res.render("500", {
+          message: `I'm sorry, but we have encountered the following error: ${err}`,
+        });
+      });
+  }
+});
+
+app.use("/deleteSite/:id", (req, res) => {
+  const siteId = req.params.id;
+  if (siteId) {
+    siteData
+      .deleteSite(siteId)
+      .then(() => {
+        res.redirect("/sites");
+      })
+      .catch((err) => {
+        res.render("500", {
+          message: `I'm sorry, but we have encountered the following error: ${err}`,
+        });
+      });
+  }
+});
+
 
 app.use((req, res) => {
   res.status(404).render("404", {message: "I'm sorry, we're unable to find what you're looking for",});

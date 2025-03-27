@@ -17,9 +17,10 @@
                 <div class="hero-content text-center">
                     <div class="max-w-md">
                         <h1 class="text-5xl font-bold">Site Collection</h1>
+                        <span class="text-base text-primary">(<%= sites.length %>)</span>
                         <p class="py-6">
                             Browse all National Historic Sites. Click buttons to filter sites by region, e.g.,   
-                            <a href="/sites?region=Atlantic Region" class="btn btn-primary mt-2 btn-xs">Atlantic Region</a>                            <a href="/sites?region=Atlantic Region">Atlantic Region</a>
+                            <a href="/sites?region=Atlantic region" class="btn btn-primary mt-2 btn-xs">Atlantic Region</a> 
                             <a href="/sites?region=Central Canada" class="btn btn-primary mt-2 btn-xs">Central Canada</a>
                             <a href="/sites?region=Prairie Provinces" class="btn btn-primary mt-2 btn-xs">Prairie Provinces</a>
                             or by province or territory, eg.,
@@ -40,12 +41,12 @@
                                 <td><span class="font-bold">Date:</span><%= site.date %> <br>
                                 <span class="font-bold">Designated: </span><%= site.designated %></td>
                                 <td><span class="font-bold"><%= site.location %>,</span>
-                                    <a href="/sites?provinceOrTerritory=<%=site.provinceOrTerritoryObj.name%>" 
-                                        class="btn btn-primary btn-xs"><%=site.provinceOrTerritoryObj.name%></a>
+                                    <a href="/sites?provinceOrTerritory=<%=site.ProvinceOrTerritory.name%>" 
+                                        class="btn btn-primary btn-xs"><%=site.ProvinceOrTerritory.name%></a>
                                 </td>
                                 <td> 
-                                    <a href="/sites?region=<%=site.provinceOrTerritoryObj.region%>" 
-                                        class="btn btn-primary btn-xs"><%=site.provinceOrTerritoryObj.region%></a>
+                                    <a href="/sites?region=<%=site.ProvinceOrTerritory.region%>" 
+                                        class="btn btn-primary btn-xs"><%=site.ProvinceOrTerritory.region%></a>
                                 </td>
                                 <td> 
                                     <a href="/sites/<%=site.siteId%>" 
