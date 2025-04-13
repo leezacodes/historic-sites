@@ -8,7 +8,7 @@
  *
  * Name: Aleeza Ahmad        Student ID: 152220236       Date: April 12th, 2025
  *
- * Published URL: https://historic-sites-gamma.vercel.app/
+ * Published URL: https://historic-sites-cgqrkt8es-aleezas-projects-7154e108.vercel.app/ 
  *
  ********************************************************************************/
 require("dotenv").config(); //for port number
