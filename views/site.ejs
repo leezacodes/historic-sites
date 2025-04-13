@@ -12,7 +12,7 @@
     <%- include('partials/navbar', {page: '' }) %>
 
         <div class="container mx-auto">
-            <div class="hero bg-base-200 rounded-lg py-6
+            <div class="hero bg-base-200 rounded-lg py-6">
                 <div class="hero-content text-center">
                     <div class="max-w-md">
                         <h1 class="text-5xl font-bold"><%= site.site %></h1>
@@ -55,6 +55,7 @@
                 <br>
                 <br>
 
+                <% if(session.user){ %> 
                 <div class="flex justify-end">
                     <a
                       class="btn btn-outline btn btn-success rounded-btn"
@@ -62,7 +63,8 @@
                       >Edit: <%= site.site %>
                     </a>
                   </div>
-                <a class="btn btn-primary btn-sm" href="#" onclick="history.back(); return false;">RETURN</a>
+                  <% } %>
+                <a class="btn btn-primary btn-sm" href="#" onclick="history.back(); return false;">Return</a>
                 <br>
               </div>
             </div>

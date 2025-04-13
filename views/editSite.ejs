@@ -100,6 +100,7 @@
               class="w-full input-bordered input-primary bg-base-200 rounded-md px-3 py-2"
             />
           </div>
+  
           <div class="mb-6">
             <label for="provinceOrTerritoryCode" class="block font-bold my-2">provinceOrTerritoryCode</label>
             <select
@@ -107,16 +108,12 @@
               name="provinceOrTerritoryCode"
               required=""
               class="w-full rounded-md px-3 py-2"
-            ></select>
-
-            <% provincesAndTerritories.forEach(provOrTerr => { %>
-                <option 
-                  value="<%= provOrTerr.code %>" 
-                  <%= sites.provinceOrTerritoryCode == provOrTerr.code ? "selected" : "" %>
-                >
-                  <%= provOrTerr.name %>
+            >
+                <% provincesAndTerritories.forEach(provinceOrTerritory=>{ %>
+                <option value="<%= provinceOrTerritory.code %>">
+                <%= provinceOrTerritory.name %>
                 </option>
-              <% }) %>
+                <% }) %>
             </select>
           </div>
 
