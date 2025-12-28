@@ -6,7 +6,7 @@ This application was developed as part of the Computer Programming & Analysis pr
 Live Demo:
 🔗 https://historic-sites-gamma.vercel.app/
 
-#Features
+# Features
 - Server-side rendering using EJS templates
 - Backend built with Node.js and Express.js
 - PostgreSQL database integration for structured data storage
@@ -14,12 +14,12 @@ Live Demo:
 - Responsive UI styled with Tailwind CSS and DaisyUI
 - Organized and maintainable project structure
 
-#Requirements
+# Requirements
 - Node.js (v18 or higher recommended)
 - PostgreSQL
 - npm
 
-#Steps
+# Steps
 Clone the repository:
 ```git clone https://github.com/leezacodes/historic-sites.git```
 
@@ -35,7 +35,7 @@ Start the server:
 
 Open your browser and navigate to: http://localhost:8080
 
-#Usage
+# Usage
 Once the server is running:
 - The application retrieves historic site data from the PostgreSQL database.
 - Data is dynamically rendered using EJS templates.
@@ -43,12 +43,12 @@ Once the server is running:
 
 This project demonstrates backend data handling, SQL validation, and server-side rendering rather than end-user data entry.
 
-Support
+# Support
 If you encounter issues or have questions:
 - Open an issue on the GitHub repository
 - Review the code comments and project structure for guidance
 
-Roadmap
+# Roadmap
 Future improvements may include:
 - Enhanced filtering and search functionality
 - Improved error handling and validation
@@ -64,15 +64,16 @@ To contribute:
 - Commit your changes with clear messages
 - Open a pull request
 
-#Authors and Acknowledgment
+# Authors and Acknowledgment
 Aleeza Ahmad
 Computer Programming & Analysis — Seneca Polytechnic
 
 Acknowledgment to course instructors and peers who provided guidance and feedback during development.
 
-#License
+# License
 This project is licensed for educational use.
 
-#Project Status
+# Project Status
 This project is complete and maintained for learning, demonstration, and portfolio purposes.
 Minor updates and refinements may be added in the future.
+
