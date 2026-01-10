@@ -6,6 +6,12 @@ This application was developed as part of the Computer Programming & Analysis pr
 Live Demo:
 🔗 https://historic-sites-gamma.vercel.app/
 
+## Built With
+
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![EJS](https://img.shields.io/badge/EJS-000000?style=for-the-badge&logo=ejs&logoColor=white)](https://ejs.co/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
 # Features
 - Server-side rendering using EJS templates
 - Backend built with Node.js and Express.js
@@ -55,15 +61,6 @@ Future improvements may include:
 - Additional data visualization features
 - Migration to environment-based configuration for deployment
 
-#Contributing
-This project is currently maintained for educational purposes. Contributions, suggestions, or improvements are welcome.
-
-To contribute:
-- Fork the repository
-- Create a feature branch
-- Commit your changes with clear messages
-- Open a pull request
-
 # Authors and Acknowledgment
 Aleeza Ahmad
 Computer Programming & Analysis — Seneca Polytechnic
@@ -76,4 +73,3 @@ This project is licensed for educational use.
 # Project Status
 This project is complete and maintained for learning, demonstration, and portfolio purposes.
 Minor updates and refinements may be added in the future.
-
