@@ -3,14 +3,14 @@ The Historic Sites Web Application is a full-stack web application that displays
 
 This application was developed as part of the Computer Programming & Analysis program at Seneca Polytechnic and follows Software Development Life Cycle (SDLC) and Agile development practices.
 
-Live Demo:
-🔗 https://historic-sites-gamma.vercel.app/
-
 ## Built With
 
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![EJS](https://img.shields.io/badge/EJS-000000?style=for-the-badge&logo=ejs&logoColor=white)](https://ejs.co/)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+# Hosting
+This project is hosted on Vercel at https://historic-sites-gamma.vercel.app/.
 
 # Features
 - Server-side rendering using EJS templates
@@ -73,3 +73,4 @@ This project is licensed for educational use.
 # Project Status
 This project is complete and maintained for learning, demonstration, and portfolio purposes.
 Minor updates and refinements may be added in the future.
+
